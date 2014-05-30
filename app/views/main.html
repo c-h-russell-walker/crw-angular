@@ -11,7 +11,9 @@
 
   <div class="jumbotron">
     <div ng:show="crwApp.isSelected(1)">
-      {{crwApp.main.about}}
+      <p ng-repeat="ps in crwApp.main.about.paragraphs">
+      {{ps}}
+      </p>
     </div>
 
     <div ng:show="crwApp.isSelected(2)">

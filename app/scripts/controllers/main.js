@@ -16,14 +16,20 @@ angular.module('crwApp')
 
     this.selectTab = function(setTab) {
         this.tab = setTab;
-    };
+      };
 
     this.isSelected = function(checkTab) {
-        return this.tab === checkTab
-    };
+        return this.tab === checkTab;
+      };
     
     // Markup in the form of properties - might revisit on the best way to do this
     this.main = {
-        about: 'I\'m a web developer, cook, musician & amateur brewer of beer and kombucha.  I live in Brooklyn, NY. and when not pursuing these ventures I enjoy cycling, reading, traveling, kickboxing and laughing at anything funny.'
-      };
+        about: {
+            paragraphs: {
+                one: 'I\'m a web developer, cook, musician & amateur brewer of beer and kombucha.  I live in Brooklyn, NY. and when not pursuing these ventures I enjoy cycling, reading, traveling, kickboxing and laughing at anything funny.',
+                two: 'Update SinglePlatform.  I work at <a href="http://www.nutraclick.com" target="_blank"><strong>NutraClick</strong></a> as a full stack developer tackling things small, large and extraordinary.  The challenges encountered so far have strengthened my skills and solidified my commitment to becoming the most well rounded developer I can be.  I\'ve worked for a web development and design company located in New York - <a href="http://www.zooluweb.com" title="website design shop"><strong>Zoolu Web Solutions</strong></a> as well as a financial consulting firm <a href="http://www.truebridge.com"><strong>Truebridge</strong></a> expanding on a browser based CRM.  These jobs complemented my learning while completing my CS degree from BU and playing as much music as I could.',
+                three: 'XXX - More updates'
+              }
+            }
+          };
   });
