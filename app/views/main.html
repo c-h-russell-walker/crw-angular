@@ -1,30 +1,27 @@
-<div ng-controller="MainCtrl as mCtrl" ng-init="tab=1">
+<div ng-controller="CrwCtrl as crwApp">
   <div class="header">
     <ul class="nav nav-pills pull-right">
-      <li class="active"><a href ng:click="tab=1">Home</a></li>
-      <li><a href ng:click="tab=2">Portfolio</a></li>
-      <li><a href ng:click="tab=3">Resumé</a></li>
-      <li><a href ng:click="tab=4">Contact</a></li>
+      <li ng-class="{ active: crwApp.isSelected(1) }"><a href ng:click="crwApp.selectTab(1)">Home</a></li>
+      <li ng-class="{ active: crwApp.isSelected(2) }"><a href ng:click="crwApp.selectTab(2)">Portfolio</a></li>
+      <li ng-class="{ active: crwApp.isSelected(3) }"><a href ng:click="crwApp.selectTab(3)">Resumé</a></li>
+      <li><a href="mailto:c.russell.walker@gmail.com">Contact</a></li>
     </ul>
-    <h3 class="text-muted">crw</h3>
+    <h3 class="text-muted">Chris H. Russell-Walker</h3>
   </div>
 
   <div class="jumbotron">
-    <div ng:show="tab == 1">
-      Fill in main about me copy
+    <div ng:show="crwApp.isSelected(1)">
+      {{crwApp.main.about}}
     </div>
 
-    <div ng:show="tab == 2">
+    <div ng:show="crwApp.isSelected(2)">
         Fill in Portfolio
     </div>
 
-    <div ng:show="tab == 3">
+    <div ng:show="crwApp.isSelected(3)">
         Fill in Resume
     </div>
-    <p class="lead">
-      Always a pleasure scaffolding your apps.
-    </p>
-    <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+    <!-- <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p> -->
   </div>
 
   <div class="row marketing">

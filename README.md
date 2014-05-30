@@ -1,0 +1,3 @@
+Rewriting personal website with the help of Yeoman and Angular.js
+
+More to come here...
