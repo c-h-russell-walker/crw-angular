@@ -17,7 +17,10 @@
 
   </div>
 
-  <div class="row marketing" ng:show="crwApp.isSelected(1)" ng-include="'views/partials/home.html'"></div>
+  <div class="row marketing">
+    <div class="col-md-8" ng:show="crwApp.isSelected(1)" ng-include="'views/partials/home.html'"></div>
+    <div class="col-md-4" ng:show="crwApp.isSelected(1)" ng-include="'views/partials/twitter-widget.html'"></div>
+  </div>
 
   <div class="row marketing" ng:show="crwApp.isSelected(3)" ng-include="'views/partials/resume.html'"></div>
 
