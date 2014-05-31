@@ -77,3 +77,17 @@ body {
     border-bottom: 0;
   }
 }
+
+/* Custom made CSS - ooh la la */
+#resume-resource-link a{
+  display: inline-block;
+  padding-left: 30px;
+  width: 165px;
+}
+#resume-resource-link .resume-pdf {
+  background: url("../images/pdf-icon.gif") no-repeat;
+}
+
+#resume-resource-link .resume-word {
+  background: url("../images/word-icon.jpg") no-repeat;
+}
