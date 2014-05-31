@@ -4,44 +4,26 @@
       <li ng-class="{ active: crwApp.isSelected(1) }"><a href ng:click="crwApp.selectTab(1)">Home</a></li>
       <li ng-class="{ active: crwApp.isSelected(2) }"><a href ng:click="crwApp.selectTab(2)">Portfolio</a></li>
       <li ng-class="{ active: crwApp.isSelected(3) }"><a href ng:click="crwApp.selectTab(3)">Resumé</a></li>
-      <li><a href="mailto:c.russell.walker@gmail.com">Contact</a></li>
     </ul>
     <h3 class="text-muted">Chris H. Russell-Walker</h3>
   </div>
 
-  <div class="jumbotron">
-    <div ng:show="crwApp.isSelected(1)">
-      <p ng-repeat="ps in crwApp.main.about.paragraphs">
-      {{ps}}
-      </p>
-    </div>
+  <div class="jumbotron" ng:show="crwApp.isSelected(1) || crwApp.isSelected(2)">
+    <div ng:show="crwApp.isSelected(1)">web developer / programmer / musician / cook</div>
 
     <div ng:show="crwApp.isSelected(2)">
         Fill in Portfolio
     </div>
 
-    <div ng:show="crwApp.isSelected(3)">
-        Fill in Resume
-    </div>
-    <!-- <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p> -->
   </div>
 
-  <div class="row marketing">
-    <h4>HTML5 Boilerplate</h4>
-    <p>
-      HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-    </p>
+  <div class="row marketing" ng:show="crwApp.isSelected(1)" ng-include="'views/partials/home.html'"></div>
 
-    <h4>Angular</h4>
-    <p>
-      AngularJS is a toolset for building the framework most suited to your application development.
-    </p>
-
-    <h4>Karma</h4>
-    <p>Spectacular Test Runner for JavaScript.</p>
-  </div>
+  <div class="row marketing" ng:show="crwApp.isSelected(3)" ng-include="'views/partials/resume.html'"></div>
 
   <div class="footer">
-    <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+    <p><a id="twitter-icon" href="http://www.twitter.com/cleanslayt" target="_blank">Twitter Profile</a></p>
+    <p><a id="linkedin-icon" href="http://www.linkedin.com/in/chrisrussellwalker" target="_blank">Linked In Profile</a></p>
+    <p><a href="mailto:c.russell.walker@gmail.com"><span class="glyphicon glyphicon-envelope"></span> Email me</a></p>
   </div>
 </div>
