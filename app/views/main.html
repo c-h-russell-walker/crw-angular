@@ -1,32 +1,30 @@
-<div ng-controller="CrwCtrl as crwApp">
-  <div class="header">
-    <ul class="nav nav-pills pull-right">
-      <li ng-class="{ active: crwApp.isSelected(1) }"><a href ng:click="crwApp.selectTab(1)">Home</a></li>
-      <li ng-class="{ active: crwApp.isSelected(2) }"><a href ng:click="crwApp.selectTab(2)">Portfolio</a></li>
-      <li ng-class="{ active: crwApp.isSelected(3) }"><a href ng:click="crwApp.selectTab(3)">Resumé</a></li>
-    </ul>
-    <h3 class="text-muted">Chris H. Russell-Walker</h3>
-  </div>
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li ng-class="{ active: crwApp.isSelected(1) }"><a href ng:click="crwApp.selectTab(1)">Home</a></li>
+    <li ng-class="{ active: crwApp.isSelected(2) }"><a href ng:click="crwApp.selectTab(2)">Portfolio</a></li>
+    <li ng-class="{ active: crwApp.isSelected(3) }"><a href ng:click="crwApp.selectTab(3)">Resumé</a></li>
+  </ul>
+  <h3 class="text-muted">Chris H. Russell-Walker</h3>
+</div>
 
-  <div class="jumbotron" ng:show="crwApp.isSelected(1) || crwApp.isSelected(2)">
-    <div ng:show="crwApp.isSelected(1)">web developer / programmer / musician / cook</div>
+<div class="jumbotron" ng:show="crwApp.isSelected(1) || crwApp.isSelected(2)">
+  <div ng:show="crwApp.isSelected(1)">web developer / programmer / musician / cook</div>
 
-    <div ng:show="crwApp.isSelected(2)">front end / back end / quality assurance / debugging</div>
+  <div ng:show="crwApp.isSelected(2)">front end / back end / quality assurance / debugging</div>
 
-  </div>
+</div>
 
-  <div class="row marketing" ng:show="crwApp.isSelected(1)">
-    <div class="col-md-8" ng-include="'views/partials/home.html'"></div>
-    <div class="col-md-4" ng-include="'views/partials/twitter-widget.html'"></div>
-  </div>
+<div class="row marketing" ng:show="crwApp.isSelected(1)">
+  <div class="col-md-8" ng-include="'views/partials/home.html'"></div>
+  <div class="col-md-4" ng-include="'views/partials/twitter-widget.html'"></div>
+</div>
 
-  <div class="row marketing" ng:show="crwApp.isSelected(2)" ng-include="'views/partials/portfolio.html'"></div>
+<div class="row marketing" ng:show="crwApp.isSelected(2)" ng-include="'views/partials/portfolio.html'"></div>
 
-  <div class="row marketing" ng:show="crwApp.isSelected(3)" ng-include="'views/partials/resume.html'"></div>
+<div class="row marketing" ng:show="crwApp.isSelected(3)" ng-include="'views/partials/resume.html'"></div>
 
-  <div class="footer">
-    <p><a id="twitter-icon" href="http://www.twitter.com/cleanslayt" target="_blank">Twitter Profile</a></p>
-    <p><a id="linkedin-icon" href="http://www.linkedin.com/in/chrisrussellwalker" target="_blank">LinkedIn Profile</a></p>
-    <p><a href="mailto:c.russell.walker@gmail.com"><span class="glyphicon glyphicon-envelope"></span> Email me</a></p>
-  </div>
+<div class="footer">
+  <p><a id="twitter-icon" href="http://www.twitter.com/cleanslayt" target="_blank">Twitter Profile</a></p>
+  <p><a id="linkedin-icon" href="http://www.linkedin.com/in/chrisrussellwalker" target="_blank">LinkedIn Profile</a></p>
+  <p><a href="mailto:c.russell.walker@gmail.com"><span class="glyphicon glyphicon-envelope"></span> Email me</a></p>
 </div>
