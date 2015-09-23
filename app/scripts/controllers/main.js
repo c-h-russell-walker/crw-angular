@@ -1,6 +1,9 @@
 'use strict';
 
 angular.module('crwApp')
+  .config(['$compileProvider', function($compileProvider) {
+    $compileProvider.debugInfoEnabled(false);
+  }])
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
@@ -25,7 +28,7 @@ angular.module('crwApp')
     this.isSelected = function(checkTab) {
         return this.tab === checkTab;
       };
-    
+
     // Markup in the form of properties - might revisit on the best way to do this
     this.main = {
         about: {
