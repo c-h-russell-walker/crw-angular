@@ -2,6 +2,5 @@
 
 angular
   .module('crwApp', [
-    'ngCookies',
     'ngSanitize'
   ]);
